@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css" media="screen" />
+    <link rel="stylesheet" href="print.css" media="print" />
+
+
+    <title>Resume Generator</title>
+</head>
+
+<body>
+    <div class="choose">
+        <div class="colors active">
+            <div class="theme">
+
+                <ul class="themes-colors">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+        </div>
+        <span class="themes-btn active"><i class="fas fa-cog fa-lg fa-spin "></i></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('span').click(function() {
+
+                $('.colors, span').toggleClass('active');
+
+            });
+
+
+            $('ul.themes-colors li').click(function() {
+
+                $('body').css('background', $(this).css('color'));
+
+            });
+
+            $('ul.text-colors li').click(function() {
+
+                $('h3, h1').css('color', $(this).css('color'));
+
+            });
+
+
+        });
+    </script>
+
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2"><b>Resume Generator </b></h1>
+        <p class="text-center"><b>By Hashish</b></p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <!--first coloum-->
+                <h3><b>Personal Information: </b></h3>
+                <div class="form-group">
+                    <label for="nameField">Your name</label>
+                    <input type="text" id="nameField" placeholder="Enter your name" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Your Contact</label>
+                    <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control"></textarea>
+                </div>
+
+                <div class="from-group">
+                    <label for="">Select your photo</label>
+                    <input id="imgField" type="file" class="form-control" />
+                </div>
+
+
+
+
+                <h2 class="text-secondary my-3">Important Links</h2>
+
+                <div class="form-group mt-2">
+                    <label for="lnField">Linkedin link: </label>
+                    <input type="text" id="lnField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="githubField">Github link: </label>
+                    <input type="text" id="githubField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="instaField">Twitter link: </label>
+                    <input type="text" id="twitterField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="instaField">Instagram link: </label>
+                    <input type="text" id="instaField" placeholder="Enter here" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!--second coloum-->
+
+                <h3><b>Professional Information: </b></h3>
+
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" rows="4" placeholder="Enter here" class="form-control "></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea rows="3" placeholder="Enter here" class="form-control weField"></textarea>
+
+                    <!--New text box-->
+                    <div class="container text-center my-2 " id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary button1">Add</button>
+                    </div>
+                </div>
+
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Qualifications</label>
+                    <textarea rows="3" placeholder="Enter here" class="form-control acadQuaField"></textarea>
+                    <div class="container text-center my-2" id="acadQuaAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary button1">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <button onclick="GenerateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+
+    </div>
+
+
+    <!--cv Template-->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!--first coloum-->
+                <img src="https://st2.depositphotos.com/1006318/5909/v/600/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg" alt="" class="img-fluid myimg" id="imgT" />
+
+                <div class="container">
+                    <p id="nameT1">hashi</p>
+                    <p id="contactT">+91374658, +91298454987</p>
+                    <p id="addressT">Pathebaada,Eluru, AndhraPradesh, India</p>
+                    <hr />
+
+                    <p> <a id="lnT" href="#1">https://www.linkedin.com/Hashishyenugula</a> </p>
+                    <p> <a id="githubT" href="#1">https://www.github.com/Hashishyenugula</a> </p>
+                    <p> <a id="twittterT" href="#1">https://www.twitter.com/Hashishyenugula</a> </p>
+                    <p> <a id="instaT" href="#1">https://www.instagram.com/Hashishyenugula</a> </p>
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <!--second coloum-->
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;">hashi</h1>
+
+                <!--objective card-->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body background1">
+                        <p id="objectiveT">Holla</p>
+                    </div>
+                </div>
+
+
+                <!--Work Experience-->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body background1">
+                        <ul id="weT">
+                            <li style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, adipisci?</li>
+                            <li style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, adipisci?</li>
+                            <li style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, adipisci?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Academic Qualifications -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body background1">
+                        <ul id="aqT">
+                            <li style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, adipisci?</li>
+                            <li style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, adipisci?</li>
+                            <li style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, adipisci?</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="container mt-3 text-center">
+                    <button id="btn1" onclick="printCV()" class="btn btn-primary button1">Print CV </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
