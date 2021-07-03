@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .5s ease;
+}
+
+h1 {
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    color: whitesmoke;
+}
+
+body {
+    color: #fff;
+    padding-top: 40px;
+    background: red;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.main h1 {
+    margin: 20% 0 0;
+    padding: 20px;
+    font-size: 80px;
+}
+
+.main h3 {
+    font-size: 30px;
+}
+
+.choose {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.choose .colors {
+    float: left;
+    padding: 7px;
+    background: #ffeb3b;
+    width: 400px;
+}
+
+.choose .colors ul li {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 10px 5px;
+    cursor: pointer;
+    background: green;
+}
+
+.choose .themes-btn {
+    float: left;
+    color: black;
+    background: #fff;
+    padding: 22px 23px 23px 23px;
+    box-shadow: 3px 3px 0 -2px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.choose .themes-btn:hover {
+    box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.56);
+}
+
+.choose .colors .theme ul li:nth-child(1),
+.choose .colors .text ul li:nth-child(1) {
+    background: #1a1a1a;
+    color: #1c1b1b;
+}
+
+.choose .colors .theme ul li:nth-child(2),
+.choose .colors .text ul li:nth-child(2) {
+    background: white;
+    color: #fff;
+}
+
+.choose .colors .theme ul li:nth-child(3),
+.choose .colors .text ul li:nth-child(3) {
+    background: #0084d6;
+    color: #0084d6;
+}
+
+.choose .colors .theme ul li:nth-child(4),
+.choose .colors .text ul li:nth-child(4) {
+    background: #cf455c;
+    color: #cf455c;
+}
+
+.choose .colors .theme ul li:nth-child(5),
+.choose .colors .text ul li:nth-child(5) {
+    background: #7b1fa2;
+    color: #7b1fa2;
+}
+
+.choose .colors .theme ul li:nth-child(6),
+.choose .colors .text ul li:nth-child(6) {
+    background: #00acc1;
+    color: #00acc1;
+}
+
+.choose .colors .theme ul li:nth-child(7),
+.choose .colors .text ul li:nth-child(7) {
+    background: #43a047;
+    color: #43a047;
+}
+
+.choose .colors .theme ul li:nth-child(8),
+.choose .colors .text ul li:nth-child(8) {
+    background: #009688;
+    color: #009688;
+}
+
+.choose .colors .theme ul li:nth-child(9),
+.choose .colors .text ul li:nth-child(9) {
+    background: #34495e;
+    color: #34495e;
+}
+
+.active {
+    transform: translate(-400px);
+}
+
+#cv-template {
+    display: none;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button1:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.myimg {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background {
+    background-color: #232b2b;
+}
+
+.background1 {
+    background-color: #e6766e;
+}
