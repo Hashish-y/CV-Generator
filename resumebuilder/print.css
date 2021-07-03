@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+    background-color: #232b2b;
+}
+
+.background1 {
+    background-color: #e6766e;
+}
+
+body {
+    background: none;
+    color: black;
+}
+
+#btn1,
+.choose,
+.themes-btn active {
+    display: none;
+}
