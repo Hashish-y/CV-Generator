@@ -4,7 +4,7 @@
 This is a fun project done by me while I am practising Web development. In this project I created a CV-Generator using HTML5, CSS3 and JS. This will produce the CV when you enter all your details asked.
 
 ## Website link: 
-https://stoic-carson-47953a.netlify.app
+https://resumebuider-hashish.netlify.app/
 
 ### Open page of Website:
 >It contains the details to enter for CV to be generated along with we can change the themes of the image with different colors.
