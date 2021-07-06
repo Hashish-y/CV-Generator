@@ -27,6 +27,6 @@ and some other themes
 >It contains CV with photo uploaded and details we entered. Which we can print the page(CV).
 ![alt text](https://github.com/Hashish-y/CV-Generator/blob/22be212323f31f29530221c649fda12cf2490087/Output/output.png)
 
-### Demo video for CV-Generator: 
+### Demo for CV-Generator: 
 
 ![alt text](https://github.com/Hashish-y/CV-Generator/blob/8a4e1274fe859bfa611d353a90b89b0bb4ca49ce/Output/demo.gif)
